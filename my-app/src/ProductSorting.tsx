@@ -109,7 +109,7 @@ function ProductSorting() {
           }}
         >
           {product.title}
-          {product.image}
+          <img style={{width:120, height: 120, marginTop: 10, marginBottom: 10}} src={product.image}></img>
           <hr></hr>
           {product.price}
         </div>
@@ -136,8 +136,8 @@ function ProductSorting() {
               padding: "20px",
               borderRadius: "8px",
               maxWidth: "400px",
-              width: "50%",
-              height: "50%",
+              width: "80%",
+              height: "80%",
             }}
             onClick={(e) => e.stopPropagation()}
           >

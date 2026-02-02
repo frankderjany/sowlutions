@@ -51,7 +51,7 @@ function Posts() {
           <p>{products.category}</p>
           <h3>{products.title}</h3>
           <p>{products.body}</p>
-          <img>{products.image}</img>
+          <img src={products.image}></img>
           <p>{products.price}</p>
         </div>
       ))}
