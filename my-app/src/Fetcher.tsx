@@ -5,6 +5,11 @@ interface Product {
   id: number;
   title: string;
   body: string;
+  image: string;
+  category: string;
+  price: number;
+  count: number;
+  rate: number
 }
 
 function Posts() {
@@ -43,8 +48,11 @@ function Posts() {
     <div>
       {products.map((products) => (
         <div key={products.id} style={{ marginBottom: "16px" }}>
+          <p>{products.category}</p>
           <h3>{products.title}</h3>
           <p>{products.body}</p>
+          <img>{products.image}</img>
+          <p>{products.price}</p>
         </div>
       ))}
     </div>

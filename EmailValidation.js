@@ -45,3 +45,5 @@ function validateEmail(email) {
 
   return dotAfterAt;
 }
+
+console.log(validateEmail('john@doe@gmail.co.lb'))

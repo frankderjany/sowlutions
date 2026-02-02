@@ -4,6 +4,11 @@ interface Product {
   id: number;
   title: string;
   description: string;
+  image: string;
+  category: string;
+  price: number;
+  count: number;
+  rate: number
 }
 
 function ProductSorting() {
@@ -21,6 +26,11 @@ function ProductSorting() {
         id: item.id,
         title: item.title,
         description: item.description,
+        image: item.image,
+        category: item.category,
+        price: item.price,
+        count: item.count,
+        rate: item.rate
       }));
 
       const saved = localStorage.getItem("products-order");
@@ -99,6 +109,9 @@ function ProductSorting() {
           }}
         >
           {product.title}
+          {product.image}
+          <hr></hr>
+          {product.price}
         </div>
       ))}
 
@@ -123,12 +136,17 @@ function ProductSorting() {
               padding: "20px",
               borderRadius: "8px",
               maxWidth: "400px",
-              width: "100%",
+              width: "50%",
+              height: "50%",
             }}
             onClick={(e) => e.stopPropagation()}
           >
             <h3>{selectedProduct.title}</h3>
             <p>{selectedProduct.description}</p>
+            <img style={{width: 120, height: 120}} src={selectedProduct.image}></img>
+            <p>{selectedProduct.category}</p>
+            <p>{selectedProduct.rate}</p>
+            <p>{selectedProduct.count}</p>
             <button onClick={() => setSelectedProduct(null)}>Close</button>
           </div>
         </div>

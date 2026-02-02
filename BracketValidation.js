@@ -43,3 +43,8 @@ function isValidBracketSequence(str) {
 
   return isEmpty();
 }
+
+console.log(isValidBracketSequence('[(])'))
+console.log(isValidBracketSequence('[()]'))
+console.log(isValidBracketSequence(''))
+console.log(isValidBracketSequence('{'))
